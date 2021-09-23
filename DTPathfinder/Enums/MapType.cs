@@ -3,7 +3,7 @@
     public enum MapType
     {
         Elevation,
-        Passability,
+        Passibility,
         Water,
         Road
     }

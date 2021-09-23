@@ -15,7 +15,7 @@ namespace DayTripper
 
 
         public SearchableMap(
-            MapMatrix elevation, MapMatrix passability, MapMatrix water, MapMatrix road,
+            MapMatrix elevation, MapMatrix passibility, MapMatrix water, MapMatrix road,
             Size size, Action<int> loadProgress = null)
         {
             //This code will break if the matices are different sizes. The calling code should check.
@@ -31,7 +31,7 @@ namespace DayTripper
                     _map[x, y] = new MapTile()
                     {
                         Elevation = elevation[x,y],
-                        IsPassable = passability[x,y] > BoolReadingThreshold,
+                        IsPassable = passibility[x,y] > BoolReadingThreshold,
                         Water = water[x,y],
                         IsRoad = road[x,y] > BoolReadingThreshold
                     };

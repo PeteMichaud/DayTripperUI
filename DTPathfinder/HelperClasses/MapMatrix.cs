@@ -7,7 +7,7 @@ namespace DTPathfinder.HelperClasses
     /// <summary>
     /// The idea here is that sometimes we have a real map of pixels to read from 
     /// and sometimes we don't but we still want to read the correct values really 
-    /// quickly during initialization. For example if we're not given a passability 
+    /// quickly during initialization. For example if we're not given a passibility 
     /// map, we want all the tiles to be passable. If we're not given a water map, 
     /// we want all the tiles to be dry land. 
     /// 

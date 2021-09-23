@@ -13,7 +13,7 @@ through the terrain given the parameters you set.
 After opening the program:
 
   1. Click Load Elevation Map 
-  2. (Optional) Click to Load any or all of Passability, Water, or Road map. 
+  2. (Optional) Click to Load any or all of Passibility, Water, or Road map. 
 	* Note: These maps must all be the same size as the elevation map.
 	* None of these are required
   3. Click Initialize Loaded Map
@@ -36,7 +36,7 @@ Protip: Zoom using the View menu, or by Alt + MouseWheel
 Elevation
 <img src="https://user-images.githubusercontent.com/182286/134564762-a2c56878-a3ea-4e31-bd13-e393480df8d2.png" width=90%>
 
-Passability
+Passibility
 <img src="https://user-images.githubusercontent.com/182286/134564831-39eca452-2199-4760-ab7e-e4571cd54899.png" width=90%>
 
 Water

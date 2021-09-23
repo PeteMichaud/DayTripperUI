@@ -1,15 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DayTripper;
 using ImageMagick;
-using System.IO;
 using System.Security;
 using DayTripperUI.Enums;
 using DTPathfinder.HelperClasses;
@@ -26,7 +21,7 @@ namespace DayTripperUI
         private readonly Dictionary<MapType, MagickImage> _mapImages = new Dictionary<MapType, MagickImage>
         {
             { MapType.Elevation, null },
-            { MapType.Passability, null },
+            { MapType.Passibility, null },
             { MapType.Water, null },
             { MapType.Road, null }
         };
@@ -56,7 +51,7 @@ namespace DayTripperUI
         private bool showPath = true;
         private bool showWater = true;
         private bool showRoads = true;
-        private bool showPassability = true;
+        private bool showPassibility = true;
         private bool showReticles = true;
 
         static readonly Dictionary<PathPickerTarget, Cursor> CursorFor = new Dictionary<PathPickerTarget, Cursor>()
@@ -75,7 +70,7 @@ namespace DayTripperUI
         readonly Dictionary<MapType, bool> _loadedAndPendingInitialize = new Dictionary<MapType, bool>
         {
             { MapType.Elevation, false },
-            { MapType.Passability, false },
+            { MapType.Passibility, false },
             { MapType.Water, false },
             { MapType.Road, false },
         };
@@ -91,7 +86,7 @@ namespace DayTripperUI
             _mapLoadingButtons = new Dictionary<MapType, Control>
             {
                 { MapType.Elevation, btnLoadElevation },
-                { MapType.Passability, btnLoadPassability },
+                { MapType.Passibility, btnLoadPassibility },
                 { MapType.Water, btnLoadWater },
                 { MapType.Road, btnLoadRoads },
             };
@@ -310,14 +305,14 @@ namespace DayTripperUI
         private void WorkerMapLoad_DoWork(object sender, DoWorkEventArgs e)
         {
             var elevationMap = new MapMatrix(_mapImages[MapType.Elevation]);
-            var passabilityMap = new MapMatrix(_mapImages[MapType.Passability], defaultValue: true);
+            var passibilityMap = new MapMatrix(_mapImages[MapType.Passibility], defaultValue: true);
             var waterMap = new MapMatrix(_mapImages[MapType.Water], defaultValue: false);
             var roadMap = new MapMatrix(_mapImages[MapType.Road], defaultValue: false);
 
             BackgroundWorker worker = sender as BackgroundWorker;
             _map = new SearchableMap(
                 elevationMap,
-                passabilityMap,
+                passibilityMap,
                 waterMap,
                 roadMap,
                 imageSize,
@@ -337,7 +332,7 @@ namespace DayTripperUI
 
             _pendingInitialize = false;
             _loadedAndPendingInitialize[MapType.Elevation] = false;
-            _loadedAndPendingInitialize[MapType.Passability] = false;
+            _loadedAndPendingInitialize[MapType.Passibility] = false;
             _loadedAndPendingInitialize[MapType.Water] = false;
             _loadedAndPendingInitialize[MapType.Road] = false;
 
@@ -491,13 +486,13 @@ namespace DayTripperUI
         }
 
         readonly Dictionary<MapType, MagickColor> _layerColors = new Dictionary<MapType, MagickColor> {
-            { MapType.Passability, MagickColors.PaleVioletRed },
+            { MapType.Passibility, MagickColors.PaleVioletRed },
             { MapType.Water, MagickColors.LightBlue },
             { MapType.Road, MagickColors.GreenYellow },
             };
 
         Dictionary<MapType, IMagickImage> _cachedColoredLayers = new Dictionary<MapType, IMagickImage> {
-            { MapType.Passability, null },
+            { MapType.Passibility, null },
             { MapType.Water, null },
             { MapType.Road, null },
             };
@@ -508,7 +503,7 @@ namespace DayTripperUI
             {
                 using (var color = new MagickImage(_layerColors[mapType], imageSize.Width, imageSize.Height))
                 {
-                    var compositeOp = mapType == MapType.Passability ? CompositeOperator.Lighten : CompositeOperator.Darken;
+                    var compositeOp = mapType == MapType.Passibility ? CompositeOperator.Lighten : CompositeOperator.Darken;
                     var coloredMap = _mapImages[mapType].Clone();
                     coloredMap.Composite(color, compositeOp);
                     _cachedColoredLayers[mapType] = coloredMap;
@@ -541,9 +536,9 @@ namespace DayTripperUI
                     composite.Composite(pathImage, CompositeOperator.Atop);
                 }
 
-                if (_mapImages[MapType.Passability] != null && showPassability)
+                if (_mapImages[MapType.Passibility] != null && showPassibility)
                 {
-                    composite.Composite(GetColoredLayer(MapType.Passability), CompositeOperator.Multiply);
+                    composite.Composite(GetColoredLayer(MapType.Passibility), CompositeOperator.Multiply);
                 }
 
                 _cachedComposite = composite;
@@ -611,9 +606,9 @@ namespace DayTripperUI
             SetDisplayImage(forceRefresh: true);
         }
 
-        private void showPassabilityToolStripMenuItem_Click(object sender, EventArgs e)
+        private void showPassibilityToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            showPassability = showPassabilityToolStripMenuItem.Checked;
+            showPassibility = showPassibilityToolStripMenuItem.Checked;
             SetDisplayImage(forceRefresh: true);
 
         }
@@ -648,9 +643,9 @@ namespace DayTripperUI
                 _mapLoadingButtons[type].Enabled = true;
         }
 
-        private void btnLoadPassability_Click(object sender, EventArgs e)
+        private void btnLoadPassibility_Click(object sender, EventArgs e)
         {
-            LoadMap(MapType.Passability);
+            LoadMap(MapType.Passibility);
         }
 
         private void btnLoadWater_Click(object sender, EventArgs e)
@@ -720,7 +715,7 @@ namespace DayTripperUI
 
         private void EnsureAllMapsSameSize()
         {
-            foreach (var type in new MapType[]{MapType.Passability, MapType.Water, MapType.Road})
+            foreach (var type in new MapType[]{MapType.Passibility, MapType.Water, MapType.Road})
             {
                 if (_mapImages[type] == null) continue;
                 if(!SizeMatchesElevation(_mapImages[type])) {

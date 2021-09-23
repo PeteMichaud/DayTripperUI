@@ -45,7 +45,7 @@
             this.showPathToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showWaterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showRoadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showPassabilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showPassibilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showStartGoalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnFindPath = new System.Windows.Forms.Button();
@@ -88,7 +88,7 @@
             this.btnInitializeMap = new System.Windows.Forms.Button();
             this.btnLoadRoads = new System.Windows.Forms.Button();
             this.btnLoadWater = new System.Windows.Forms.Button();
-            this.btnLoadPassability = new System.Windows.Forms.Button();
+            this.btnLoadPassibility = new System.Windows.Forms.Button();
             this.btnLoadElevation = new System.Windows.Forms.Button();
             this.pictureBoxMap = new System.Windows.Forms.PictureBox();
             this.dlgOpenMap = new System.Windows.Forms.OpenFileDialog();
@@ -202,7 +202,7 @@
             this.showPathToolStripMenuItem,
             this.showWaterToolStripMenuItem,
             this.showRoadToolStripMenuItem,
-            this.showPassabilityToolStripMenuItem,
+            this.showPassibilityToolStripMenuItem,
             this.showStartGoalToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
@@ -264,15 +264,15 @@
             this.showRoadToolStripMenuItem.Text = "Show Road";
             this.showRoadToolStripMenuItem.Click += new System.EventHandler(this.showRoadToolStripMenuItem_Click);
             // 
-            // showPassabilityToolStripMenuItem
+            // showPassibilityToolStripMenuItem
             // 
-            this.showPassabilityToolStripMenuItem.Checked = true;
-            this.showPassabilityToolStripMenuItem.CheckOnClick = true;
-            this.showPassabilityToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.showPassabilityToolStripMenuItem.Name = "showPassabilityToolStripMenuItem";
-            this.showPassabilityToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
-            this.showPassabilityToolStripMenuItem.Text = "Show Passability";
-            this.showPassabilityToolStripMenuItem.Click += new System.EventHandler(this.showPassabilityToolStripMenuItem_Click);
+            this.showPassibilityToolStripMenuItem.Checked = true;
+            this.showPassibilityToolStripMenuItem.CheckOnClick = true;
+            this.showPassibilityToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.showPassibilityToolStripMenuItem.Name = "showPassibilityToolStripMenuItem";
+            this.showPassibilityToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.showPassibilityToolStripMenuItem.Text = "Show Passibility";
+            this.showPassibilityToolStripMenuItem.Click += new System.EventHandler(this.showPassibilityToolStripMenuItem_Click);
             // 
             // showStartGoalToolStripMenuItem
             // 
@@ -794,7 +794,7 @@
             this.grpMaps.Controls.Add(this.btnInitializeMap);
             this.grpMaps.Controls.Add(this.btnLoadRoads);
             this.grpMaps.Controls.Add(this.btnLoadWater);
-            this.grpMaps.Controls.Add(this.btnLoadPassability);
+            this.grpMaps.Controls.Add(this.btnLoadPassibility);
             this.grpMaps.Controls.Add(this.btnLoadElevation);
             this.grpMaps.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpMaps.Location = new System.Drawing.Point(3, 3);
@@ -845,18 +845,18 @@
             this.btnLoadWater.UseVisualStyleBackColor = true;
             this.btnLoadWater.Click += new System.EventHandler(this.btnLoadWater_Click);
             // 
-            // btnLoadPassability
+            // btnLoadPassibility
             // 
-            this.btnLoadPassability.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLoadPassability.Enabled = false;
-            this.btnLoadPassability.Location = new System.Drawing.Point(4, 47);
-            this.btnLoadPassability.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLoadPassability.Name = "btnLoadPassability";
-            this.btnLoadPassability.Size = new System.Drawing.Size(279, 28);
-            this.btnLoadPassability.TabIndex = 2;
-            this.btnLoadPassability.Text = "Load Passability";
-            this.btnLoadPassability.UseVisualStyleBackColor = true;
-            this.btnLoadPassability.Click += new System.EventHandler(this.btnLoadPassability_Click);
+            this.btnLoadPassibility.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLoadPassibility.Enabled = false;
+            this.btnLoadPassibility.Location = new System.Drawing.Point(4, 47);
+            this.btnLoadPassibility.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLoadPassibility.Name = "btnLoadPassibility";
+            this.btnLoadPassibility.Size = new System.Drawing.Size(279, 28);
+            this.btnLoadPassibility.TabIndex = 2;
+            this.btnLoadPassibility.Text = "Load Passibility";
+            this.btnLoadPassibility.UseVisualStyleBackColor = true;
+            this.btnLoadPassibility.Click += new System.EventHandler(this.btnLoadPassibility_Click);
             // 
             // btnLoadElevation
             // 
@@ -1038,13 +1038,13 @@
         private System.Windows.Forms.ToolStripMenuItem zoomResetToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem showPathToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem showPassabilityToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showPassibilityToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel txtZoom;
         private System.Windows.Forms.ToolStripMenuItem showStartGoalToolStripMenuItem;
         private System.Windows.Forms.GroupBox grpMaps;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Button btnLoadElevation;
-        private System.Windows.Forms.Button btnLoadPassability;
+        private System.Windows.Forms.Button btnLoadPassibility;
         private System.Windows.Forms.Button btnLoadRoads;
         private System.Windows.Forms.Button btnLoadWater;
         private System.Windows.Forms.Button btnInitializeMap;
