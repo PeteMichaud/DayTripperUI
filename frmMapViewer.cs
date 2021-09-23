@@ -56,7 +56,7 @@ namespace DayTripperUI
         private bool showPath = true;
         private bool showWater = true;
         private bool showRoads = true;
-        private bool showPassability = false;
+        private bool showPassability = true;
         private bool showReticles = true;
 
         static readonly Dictionary<PathPickerTarget, Cursor> CursorFor = new Dictionary<PathPickerTarget, Cursor>()
