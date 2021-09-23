@@ -2,7 +2,7 @@
 
 Initial release, this works but it's in a pretty rough state.
 
-![Daytripper Screenshot](https://github.com/PeteMichaud/DayTripperUI/tree/master/Resources/screenshot.png)
+<img src="https://github.com/PeteMichaud/DayTripperUI/tree/master/Resources/screenshot.png" width=90%>
 
 DayTripper is a .NET application that allows you to load an elevation 
 map and specify a start point and end point to find the best path 
@@ -34,16 +34,16 @@ Protip: Zoom using the View menu, or by Alt + MouseWheel
 ## Example Maps
 
 Elevation
-![Elevation Map](https://github.com/PeteMichaud/DayTripperUI/tree/master/Resources/elevation.png)
+<img src="https://github.com/PeteMichaud/DayTripperUI/tree/master/Resources/elevation.png" width=90%>
 
 Passability
-![Passability](https://github.com/PeteMichaud/DayTripperUI/tree/master/Resources/passability.png)
+<img src="https://github.com/PeteMichaud/DayTripperUI/tree/master/Resources/passability.png" width=90%>
 
 Water
-![Water](https://github.com/PeteMichaud/DayTripperUI/tree/master/Resources/water.png)
+<img src="https://github.com/PeteMichaud/DayTripperUI/tree/master/Resources/water.png" width=90%>
 
 Roads
-![Roads](https://github.com/PeteMichaud/DayTripperUI/tree/master/Resources/roads.png)
+<img src="https://github.com/PeteMichaud/DayTripperUI/tree/master/Resources/roads.png" width=90%>
 
 ## Technical Details
 
