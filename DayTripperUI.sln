@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayTripperUI", "DayTripperUI.csproj", "{E8290559-FFD9-4CFD-9E76-B3E6D2D9053E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{21BCDDE2-8669-4137-B708-A3D81BDAD145}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTPathfinder", "DTPathfinder\DTPathfinder.csproj", "{83593FBD-2816-41EF-A4A1-01A39A58352C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8290559-FFD9-4CFD-9E76-B3E6D2D9053E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8290559-FFD9-4CFD-9E76-B3E6D2D9053E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8290559-FFD9-4CFD-9E76-B3E6D2D9053E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8290559-FFD9-4CFD-9E76-B3E6D2D9053E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83593FBD-2816-41EF-A4A1-01A39A58352C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83593FBD-2816-41EF-A4A1-01A39A58352C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83593FBD-2816-41EF-A4A1-01A39A58352C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83593FBD-2816-41EF-A4A1-01A39A58352C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D3E1E82-AC3B-4B34-9CC8-D78DA2B6734A}
+	EndGlobalSection
+EndGlobal
